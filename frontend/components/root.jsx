@@ -1,0 +1,18 @@
+import React from 'react';
+import { Provider } from 'react-redux';
+import { HashRouter } from 'react-router-dom';
+import App from './app';
+
+// Use provider in order to give my App access to the store
+
+const Root = ({ store }) => {
+  return (
+    <HashRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </HashRouter>
+  )
+}
+
+export default Root;
